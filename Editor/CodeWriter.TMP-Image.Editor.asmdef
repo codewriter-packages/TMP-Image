@@ -1,0 +1,19 @@
+{
+    "name": "CodeWriter.TMP-Image.Editor",
+    "rootNamespace": "",
+    "references": [
+        "CodeWriter.TMP-Image",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
