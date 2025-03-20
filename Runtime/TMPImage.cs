@@ -109,7 +109,8 @@ namespace CodeWriter.UI
 
             if (preserveAspect)
             {
-                PreserveSpriteAspectRatio(ref r, uv.size);
+                var spriteSize = Vector2.Scale(uv.size, new Vector2(texture.width, texture.height));
+                PreserveSpriteAspectRatio(ref r, spriteSize);
             }
 
             var v = new Vector4(r.x, r.y, r.x + r.width, r.y + r.height);
