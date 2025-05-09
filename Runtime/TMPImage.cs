@@ -176,7 +176,9 @@ namespace CodeWriter.UI
             }
 
             var spriteChar = currentSpriteAsset.spriteCharacterTable[spriteIndex];
-            var spriteGlyph = currentSpriteAsset.spriteGlyphTable[(int) spriteChar.glyphIndex];
+            var glyphIndexLookup = TMPImage_TMP_SpriteAssetProxy.GetGlyphIndexLookup(currentSpriteAsset);
+            var spriteGlyphIndex = glyphIndexLookup[spriteChar.glyphIndex];
+            var spriteGlyph = currentSpriteAsset.spriteGlyphTable[spriteGlyphIndex];
 
             texture = currentSpriteAsset.spriteSheet;
             uvRect = CalculateUvRect(spriteGlyph.glyphRect, texture);
