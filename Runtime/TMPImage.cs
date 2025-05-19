@@ -157,7 +157,11 @@ namespace CodeWriter.UI
         private static bool TrySearchAtlasWithUv(ref TMP_SpriteAsset currentSpriteAsset, string spriteName,
             out Texture texture, out Rect uvRect)
         {
-            var spriteNameHash = TMP_TextParsingUtilities.GetHashCodeCaseSensitive(spriteName);
+#if UGUI_2_0
+            var spriteNameHash = TMP_TextUtilities.GetHashCode(spriteName);
+#else
+            var spriteNameHash = TMP_TextParsingUtilities.GetHashCode(spriteName);
+#endif
 
             currentSpriteAsset = TMP_SpriteAsset.SearchForSpriteByHashCode(currentSpriteAsset,
                 spriteNameHash, true, out var spriteIndex);
