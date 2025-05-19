@@ -60,8 +60,7 @@ namespace CodeWriter.UI
                 return false;
             }
 
-            var outer = Outer(tmpImage);
-            return outer.width > 0 && outer.height > 0;
+            return true;
         }
 
         public override void OnPreviewGUI(Rect rect, GUIStyle background)
